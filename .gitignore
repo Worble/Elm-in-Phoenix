@@ -30,3 +30,6 @@ npm-debug.log
 elm-stuff
 # elm-repl generated files
 repl-temp-*
+
+#elm generated files
+/assets/vendor/main.js
