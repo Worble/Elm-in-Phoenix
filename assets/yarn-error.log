@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add brunch-elm
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\chocolatey\lib\Elixir/bin;C:\Program Files (x86)\Elm Platform\0.18\bin;C:\Users\RobertClarke\AppData\Local\Microsoft\WindowsApps;C:\Users\RobertClarke\AppData\Local\Programs\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Users\RobertClarke\AppData\Roaming\npm;C:\Users\RobertClarke\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.6.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "repository": {},
+    "license": "MIT",
+    "scripts": {
+      "deploy": "brunch build --production",
+      "watch": "brunch watch --stdin"
+    },
+    "dependencies": {
+      "phoenix": "file:../deps/phoenix",
+      "phoenix_html": "file:../deps/phoenix_html"
+    },
+    "devDependencies": {
+      "babel-brunch": "6.1.1",
+      "brunch": "2.10.9",
+      "clean-css-brunch": "2.10.0",
+      "uglify-js-brunch": "2.10.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find package "brunch-elm" on the "npm" registry.
+      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at NpmResolver.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:51625:15)
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:160:7)
