@@ -52,8 +52,6 @@ view model =
             (List.map displayMessages (List.reverse model.messages))
         , div [ class "flex" ]
         [   
-            -- input [ type_ "text", onInput Update.InputText, onKeyUp function, value model.input ] []
-            -- input [ type_ "text", value model.input, disabled True ] [ ]
             span[] 
                 [ text (model.pre ++ model.input)
             ]
