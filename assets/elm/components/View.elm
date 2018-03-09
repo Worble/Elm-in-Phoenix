@@ -1,10 +1,11 @@
 module View exposing (view)
 
-import Html exposing (Html, div, text, Attribute, input, span)
+import Html exposing (Html, div, text, Attribute, input, span, button)
 import Html.Attributes exposing (id, type_, value, class, tabindex, disabled, autofocus)
-import Html.Events exposing (onWithOptions, onSubmit, onInput, keyCode, Options)
+import Html.Events exposing (onWithOptions, onSubmit, onInput, keyCode, Options, onClick)
 import Model exposing (Model, model)
-import Update exposing (Msg, update)
+import Update exposing (update)
+import Msgs exposing (Msg(..))
 import Json.Decode as Json
 import Char
 import Svg exposing (svg, line, animate)
@@ -36,19 +37,21 @@ handleKeys : Int -> Msg
 handleKeys number =
   case number of
     13 ->
-        Update.SubmitText
+        Msgs.SendMessage
 
     8 ->
-        Update.Delete
+        Msgs.Delete
 
     _ -> 
-        Update.Keypress (Char.fromCode number)
+        Msgs.Keypress (Char.fromCode number)
 
 view : Model -> Html Msg
 view model =
     div [ id "application", class "application", tabindex 1, onKeypress handleKeys ]
     [
-        div []
+        button [ onClick GetToken ] [ text "Get Token"]
+        , button [ onClick JoinChannel ] [ text "Join Channel"]
+        , div []
             (List.map displayMessages (List.reverse model.messages))
         , div [ class "flex" ]
         [   

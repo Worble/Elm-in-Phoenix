@@ -1,1 +1,1 @@
-<script>Elm.Main.fullscreen()</script>
+<script>var app = Elm.Main.fullscreen()</script>

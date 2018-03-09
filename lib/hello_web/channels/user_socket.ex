@@ -2,7 +2,7 @@ defmodule HelloWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", HelloWeb.RoomChannel
+  channel "room:*", HelloWeb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -19,6 +19,17 @@ defmodule HelloWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
+  
+  # def connect(%{"token" => token}, socket) do
+  #   case Phoenix.Token.verify(socket, "user salt", token, max_age: 86400) do
+  #     {:ok, id} ->
+  #       socket = assign(socket, :id, id)
+  #       {:ok, socket}
+  #     {:error, _} ->
+  #       :error
+  #   end
+  # end
+
   def connect(_params, socket) do
     {:ok, socket}
   end

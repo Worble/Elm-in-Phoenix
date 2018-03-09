@@ -18,5 +18,11 @@
         <%= render @view_module, @view_template, assigns %>
       </main>
     </div>
+    <script>
+      var userToken = "<%= @key %>";
+      app.ports.getToken.subscribe(function() {
+        app.ports.token.send(userToken);
+      });    
+    </script>
   </body>
 </html>
